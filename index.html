@@ -1,45 +1,26 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Pystache</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <meta charset="UTF-8">
+    <title>Pystache by ansagay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
+    <section class="page-header">
+      <h1 class="project-name">Pystache</h1>
+      <h2 class="project-tagline">Mustache in Python</h2>
+      <a href="https://github.com/ansagay/pystache" class="btn">View on GitHub</a>
+      <a href="https://github.com/ansagay/pystache/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/ansagay/pystache/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-      <header>
-        <h1>Pystache</h1>
-        <p>Mustache in Python</p>
-      </header>
-
-      <div id="banner">
-        <span id="logo"></span>
-
-        <a href="https://github.com/defunkt/pystache" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
-          <span>Downloads:</span>
-          <ul>
-            <li><a href="https://github.com/defunkt/pystache/zipball/master" class="button">ZIP</a></li>
-            <li><a href="https://github.com/defunkt/pystache/tarball/master" class="button">TAR</a></li>
-          </ul>
-        </div>
-      </div><!-- end banner -->
-
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
-        <h1>Pystache</h1>
+    <section class="main-content">
+      <h1>
+<a id="pystache" class="anchor" href="#pystache" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pystache</h1>
 
 
 
@@ -81,7 +62,8 @@ on <a href="http://pypi.python.org/pypi/pystache">PyPI</a>. This version of
 Pystache passes all tests in <a href="https://github.com/mustache/spec/tree/v1.1.2">version
 1.1.2</a> of the spec.</p>
 
-<h2>Requirements</h2>
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
 <p>Pystache is tested with--</p>
 
@@ -97,7 +79,9 @@ Pystache passes all tests in <a href="https://github.com/mustache/spec/tree/v1.1
 <li>  Python 3.3</li>
 <li>  <a href="http://pypy.org/">PyPy</a>
 </li>
-</ul><p><a href="http://packages.python.org/distribute/">Distribute</a> (the setuptools fork)
+</ul>
+
+<p><a href="http://packages.python.org/distribute/">Distribute</a> (the setuptools fork)
 is recommended over <a href="http://pypi.python.org/pypi/setuptools">setuptools</a>,
 and is required in some cases (e.g. for Python 3 support).
 If you use <a href="http://www.pip-installer.org/">pip</a>, you probably already satisfy
@@ -116,7 +100,8 @@ as follows:</p>
 <pre><code>pip install 'simplejson&lt;2.1.0'
 </code></pre>
 
-<h2>Install It</h2>
+<h2>
+<a id="install-it" class="anchor" href="#install-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install It</h2>
 
 <pre><code>pip install pystache
 </code></pre>
@@ -129,7 +114,8 @@ as follows:</p>
 <p>To install and test from source (e.g. from GitHub), see the Develop
 section.</p>
 
-<h2>Use It</h2>
+<h2>
+<a id="use-it" class="anchor" href="#use-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use It</h2>
 
 <pre><code>&gt;&gt;&gt; import pystache
 &gt;&gt;&gt; print pystache.render('Hi {{person}}!', {'person': 'Mom'})
@@ -189,7 +175,8 @@ Hey Pops!
 Hey you!
 </code></pre>
 
-<h2>Python 3</h2>
+<h2>
+<a id="python-3" class="anchor" href="#python-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python 3</h2>
 
 <p>Pystache has supported Python 3 since version 0.5.1. Pystache behaves
 slightly differently between Python 2 and 3, as follows:</p>
@@ -204,7 +191,10 @@ different values under Python 2 and 3, even when run from the same
 system. Check your own system for the behavior on your system, or do
 not rely on the defaults by passing in the encodings explicitly
 (e.g. to the <code>Renderer</code> class).</li>
-</ul><h2>Unicode</h2>
+</ul>
+
+<h2>
+<a id="unicode" class="anchor" href="#unicode" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unicode</h2>
 
 <p>This section describes how Pystache handles unicode, strings, and
 encodings.</p>
@@ -238,7 +228,8 @@ attribute can be controlled on a per-view basis by subclassing the
 <code>TemplateSpec</code> class. When not specified explicitly, these attributes
 default to values set in Pystache's <code>defaults</code> module.</p>
 
-<h2>Develop</h2>
+<h2>
+<a id="develop" class="anchor" href="#develop" aria-hidden="true"><span class="octicon octicon-link"></span></a>Develop</h2>
 
 <p>To test from a source distribution (without installing)--</p>
 
@@ -280,7 +271,8 @@ parses the json files. To install PyYAML--</p>
 nosetests --tests pystache/tests/test_context.py:GetValueTests.test_dictionary__key_present
 </code></pre>
 
-<h3>Using Python 3 with Pystache from source</h3>
+<h3>
+<a id="using-python-3-with-pystache-from-source" class="anchor" href="#using-python-3-with-pystache-from-source" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using Python 3 with Pystache from source</h3>
 
 <p>Pystache is written in Python 2 and must be converted to Python 3 prior to
 using it with Python 3.  The installation process (and tox) do this
@@ -312,13 +304,15 @@ and not from the original (unconverted) source directory.  Otherwise, you will
 get a syntax error.  You can help prevent this by not running the Python
 IDE from the project directory when importing Pystache while using Python 3.</p>
 
-<h2>Mailing List</h2>
+<h2>
+<a id="mailing-list" class="anchor" href="#mailing-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mailing List</h2>
 
 <p>There is a <a href="http://librelist.com/browser/pystache/">mailing list</a>. Note
 that there is a bit of a delay between posting a message and seeing it
 appear in the mailing list archive.</p>
 
-<h2>Credits</h2>
+<h2>
+<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Credits</h2>
 
 <pre><code>&gt;&gt;&gt; context = { 'author': 'Chris Wanstrath', 'maintainer': 'Chris Jerdonek' }
 &gt;&gt;&gt; print pystache.render("Author: {{author}}\nMaintainer: {{maintainer}}", context)
@@ -331,14 +325,15 @@ under a <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creat
 License</a>.
 <img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" alt="" title="Creative
 Commons Attribution-ShareAlike 3.0 Unported License"></p>
-      </section>
-      <footer>
-        <p>Project created by <a href="https://github.com/defunkt">defunkt</a></p>
-        <p>Project maintained by <a href="https://github.com/cjerdonek">cjerdonek</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
-      </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
 
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/ansagay/pystache">Pystache</a> is maintained by <a href="https://github.com/ansagay">ansagay</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
   </body>
 </html>
